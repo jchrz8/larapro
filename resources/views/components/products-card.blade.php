@@ -3,7 +3,7 @@
 
         <div class="mt-4 ">
             <h3 class="text-3xl w-80 mr-6 ">
-                <a class="" href="/listings/{{$product->id}}">{{$product->title}}</a>
+                <a class="" href="/products/{{$product->id}}">{{$product->title}}</a>
             </h3>
         </div>
         <div class="mt-4 flex">
@@ -17,7 +17,8 @@
             <div class="row">
                 
                 <div class="mt-2 mb-4">
-                    <a class='fas fa-wallet '>{{$product->value}} zł</a>
+                    <a class='fas fa-wallet '> {{$product->value}}</a>
+                    <a class="text-xl">zł</a>
                 </div>
                 <div class="mt-2 mb-4">
                     <a >{{$product->desc}}</a>

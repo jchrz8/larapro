@@ -30,7 +30,7 @@
         </script>
         <title>LaraGigs | Find Laravel Jobs & Projects</title>
     </head>
-    <body class="mb-48">
+    <body class="mb-24">
         <nav class=" justify-between items-center  bg-header">
            {{-- zdjecie --}}
            <img
@@ -48,7 +48,7 @@
             <div class="text-center basis-5/6 mt-4">
             @yield('content')
             </div>
-            <div class="bg-bok basis-1/6">
+            <div class="bg-bok basis-1/6 min-h-screen">
             </div>
             </article>
             
