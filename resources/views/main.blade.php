@@ -9,7 +9,7 @@
 
 @endforeach 
 @else
-<p>No listings found</p>
+<p>No products found</p>
 
 @endunless
 </div>

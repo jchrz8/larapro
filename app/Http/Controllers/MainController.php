@@ -9,8 +9,9 @@ class MainController extends Controller
 {
     //
     public function index(){
+        
         return view('main', [
-            'products' => Shop::latest()->paginate(6)//ile chcesz wyswietlic (odrazu rozdziela na strony ?page=2), get() - wez wszystkie
+            'products' => Shop::latest()->filter(request(['tag']))->paginate(6)//ile chcesz wyswietlic (odrazu rozdziela na strony ?page=2), get() - wez wszystkie
         ]);
     }
     public function show(Shop $product){

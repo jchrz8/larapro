@@ -10,7 +10,8 @@
             <img
             class="hidden w-80 h-80 mr-6 ml-4 md:block rounded"
             src="{{
-                asset('images/no_image.jpg')
+                $product->image ? asset('storage/' . $product->image)
+                : asset('no_image.jpg')
             }}"
             alt=""
             />

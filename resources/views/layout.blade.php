@@ -31,12 +31,13 @@
         <title>LaraGigs | Find Laravel Jobs & Projects</title>
     </head>
     <body class="mb-24">
-        <nav class=" justify-between items-center  bg-header">
+        <nav href="/" class=" justify-between items-center  bg-header">
            {{-- zdjecie --}}
            <img
             class="hidden w-20 h-20 mr-6 ml-4 md:block rounded"
+            
             src="{{
-                asset('images/no_image.jpg')
+                asset('no_image.jpg')
             }}"
             alt=""
             />
@@ -49,6 +50,21 @@
             @yield('content')
             </div>
             <div class="bg-bok basis-1/6 min-h-screen">
+                <ul class="ml-4 mt-5 text-white">
+                    <li ><a href="/?tag=Outerwear">Outerwear</a></li>
+                    <li><a href="/?tag=Puffer_jackets">Puffer jackets</a></li>
+                    <li><a href="/?tag=Overshirts">Overshirts</a></li>
+                    <li><a href="/?tag=Hoodies">Hoodies</a></li>
+                    <li><a href="/?tag=Sweaters">Sweaters</a></li>
+                    <li><a href="/?tag=Vests">Vests</a></li>
+                    <li><a href="/?tag=Shirts">Shirts</a></li>
+                    <li><a href="/?tag=T-shirts">T-shirts</a></li>
+                    <li><a href="/?tag=Jeans">Jeans</a></li>
+                    <li><a href="/?tag=Pants">Pants</a></li>
+                    <li><a href="/?tag=Cargo">Cargo</a></li>
+                    <li><a href="/?tag=Tracksuit">Tracksuit</a></li>
+                    <li><a href="/?tag=Shorts">Shorts</a></li>
+                </ul>
             </div>
             </article>
             

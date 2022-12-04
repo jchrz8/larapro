@@ -19,6 +19,7 @@ return new class extends Migration
             $table->float('value');
             $table->string('image')->nullable();
             $table->string('desc');
+            $table->string('tags');
             $table->timestamps();
         });
     }

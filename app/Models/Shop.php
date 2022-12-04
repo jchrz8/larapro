@@ -7,5 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Shop extends Model
 {
+    protected $fillable = ['title','value','image','desc'];
     use HasFactory;
+    public function scopeFilter($query, array $filters){
+        if($filters['tag'] ?? false){
+            $query->where('tags','like', '%'
+            .request('tag').'%');
+        }
+    }
 }

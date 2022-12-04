@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,7 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class,'index']);
 Route::get('/products/{product}', [MainController::class, 'show']);
+
+
+Route::get('/admin', [AdminController::class,'create_page']);
+Route::post('/admin', [AdminController::class, 'create_post']);
