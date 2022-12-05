@@ -2,15 +2,20 @@
 @section('content')
     <div class="flex flex-basic">
         <div class=" basis-2/3 mt-4">
+            @php
+                $imageAll = explode(', ', $product->image)
+            @endphp
             <img
             class="w-full h-2/3 mr-6 ml-4 md:block rounded"
             src="{{
-                $product->image ? asset('storage/' . $product->image)
+                $product->image ? asset('storage/' . $imageAll[0])
                 : asset('no_image.jpg')
             }}"
             alt=""
             />
+            
         </div>
+        
         <div class=" basis-1/3 min-h-screen text-center row">
             
             <div class="mt-10">

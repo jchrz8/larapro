@@ -39,6 +39,24 @@
             </p>
         @enderror
     </div>
+    <div class="mb-6">
+        <label
+            for="tags"
+            class="inline-block text-lg mb-2"
+            >Tags: </label
+        >
+        <input
+            type="text"
+            class="border border-gray-200 rounded p-2 w-1/2"
+            name="tags"
+            value="{{old('tags')}}"
+        />
+        @error('tags')
+            <p class="text-red-500 text-xs mt-1">
+                {{$message}}
+            </p>
+        @enderror
+    </div>
 
     <div class="mb-6">
         <label for="image" class="inline-block text-lg mb-2">
@@ -46,8 +64,9 @@
         </label>
         <input
             type="file"
-            class="border border-gray-200 rounded p-2 w-1/2"
-            name="image"
+            class="border form-control  border-gray-200 rounded p-2 w-1/2"
+            name="images[]"
+            multiple
         />
         @error('image')
         <p class="text-red-500 text-xs mt-1">

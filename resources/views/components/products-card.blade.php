@@ -7,10 +7,13 @@
             </h3>
         </div>
         <div class="mt-4 flex">
+            @php
+                $imageAll = explode(', ', $product->image)
+            @endphp
             <img
             class="hidden w-80 h-80 mr-6 ml-4 md:block rounded"
             src="{{
-                $product->image ? asset('storage/' . $product->image)
+                $product->image ? asset('storage/' . $imageAll[0])
                 : asset('no_image.jpg')
             }}"
             alt=""

@@ -11,15 +11,23 @@ class AdminController extends Controller
         return view('tools.create');
     }
     public function create_post(Request $request){
-        
+        // dd($request->files->all());
         $formFields = $request->validate([
             'title' => 'required',
+            'tags' => 'required',
             'value' => 'required',
             'desc' => 'required'
         ]);
-    if($request->hasFile('image')){
-        $formFields['image'] = $request->file('image')
-        ->store('images', 'public');
+    if($request->hasFile('images')){
+        $files = $request->file('images');
+        $link = "";
+foreach($files as $image){
+    $link .= $image
+    ->store('images', 'public')
+    . ', ';
+             
+    }
+    $formFields['image']= $link;
     }
     Shop::create($formFields);
 
